@@ -28,6 +28,7 @@
 --mb-0-5: 0.5rem;
 --mb-0-75: 0.75rem;
 --mb-1: 1rem;
+--mb-1-5: 1.5rem
 /* Z index */
 --z-tooltip: 10;
 --z-fixed: 100;
@@ -132,4 +133,17 @@ img {
 .button--flex {
   display: inline-flex;
   align-items: center;
+}
+
+@media screen and(max-width: 992px) {
+.container {
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}  
+@media screen and(max-width: 350px){
+  .container{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+}
 }
