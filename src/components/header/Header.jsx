@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./header.css"
 
 const Header = () => {
-    const[Toggle,showMenu] = useState(false)
+    const [toggle, setToggle] = useState(false)
     return (
   <header className="header">
     <nav className="nav container">
@@ -10,7 +10,7 @@ const Header = () => {
             <span className="sr-only">Home</span>
         </a>
 
-        <div className={Toggle ? "nav__menu show-menu":"nav__menu"}>
+        <div className={toggle ? "nav__menu show-menu":"nav__menu"}>
             <ul className="nav__list grid">
                 <li className="nav__item">
                     <a href="#home" className="nav__link active-link">
@@ -18,17 +18,17 @@ const Header = () => {
                     </a>
                 </li>
                                 <li className="nav__item">
-                    <a href="#about" className="nav__link">
+                    <a href="#sobre" className="nav__link">
                         <i className="uil uil-user nav__icon"></i>Sobre
                     </a>
                 </li>
                                 <li className="nav__item">
-                    <a href="#skills" className="nav__link">
+                    <a href="#habilidades" className="nav__link">
                         <i className="uil uil-file-alt nav__icon"></i>Habilidades
                     </a>
                 </li>
                                 <li className="nav__item">
-                    <a href="#services" className="nav__link">
+                    <a href="#serviços" className="nav__link">
                         <i className="uil uil-briefcase-alt nav__icon"></i>Serviços
                     </a>
                 </li>
@@ -46,10 +46,10 @@ const Header = () => {
                 </li>
             </ul>
             <i className="uil uil-times nav__close"
-            onClick={() => showMenu(!Toggle)}></i>
+            onClick={() => setToggle(!toggle)}></i>
         </div>
         <div className="nav__toggle"
-         onClick={() => showMenu(!Toggle)}>
+         onClick={() => setToggle(!toggle)}>
             <i className="uil uil-apps"></i>
         </div>
     </nav>
