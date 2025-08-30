@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import "./contato.css"
 
 
 const Contato = () => {
+     const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_qzhz7jq', 'template_1uyhafc', form.current, {
+        publicKey: 'ib7JHNLNS2tk7ewHf',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <section className='contact section' id='contact'>
         <h2 className='section__title'>Entre em contato</h2>
@@ -42,7 +62,7 @@ const Contato = () => {
             <div className='contact__content'>
                 <h3 className='contact__title'>Me escreva seu projeto</h3>
 
-                <form className='contact__form'>
+                <form ref={form} onSubmit={sendEmail} className='contact__form'>
                     <div className='contact__form-div'>
                         <label className='contact__form-tag'>Nome</label>
                         <input type='text' name='name' className='contact__form-input' placeholder='Insira seu nome' />
