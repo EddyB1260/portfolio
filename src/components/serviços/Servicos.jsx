@@ -17,7 +17,7 @@ const Servicos = () => {
 
 
   return (
-    <section className='services section' id="services">
+    <section className='services section' id="servicos">
       <h2 className='section__title'>Serviços</h2>
       <span className='section__subtitle'>O que ofereço</span>
     

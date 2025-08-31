@@ -17,12 +17,12 @@ const Header = () => {
                         <i className="uil uil-estate nav__icon"></i>Home
                     </a>
                 </li>
-                                <li className="nav__item">
+                 <li className="nav__item">
                     <a href="#sobre" className="nav__link">
                         <i className="uil uil-user nav__icon"></i>Sobre
                     </a>
                 </li>
-                                <li className="nav__item">
+                  <li className="nav__item">
                     <a href="#habilidades" className="nav__link">
                         <i className="uil uil-file-alt nav__icon"></i>Habilidades
                     </a>
