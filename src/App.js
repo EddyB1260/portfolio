@@ -5,7 +5,8 @@ import Sobre from './components/sobre/Sobre';
 import Habilidades from './components/habilidades/Habilidades';
 import Servicos from './components/serviços/Servicos';
 import Contato from './components/contato/Contato';
-
+import Footer from './components/footer/Footer';
+import ScrollUp from './components/scollup/ScrollUp';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
     <Servicos />
     <Contato />
     </main>
+    <Footer />
+    <ScrollUp />
     </>
   );
 }
